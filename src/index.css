@@ -4,12 +4,20 @@
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 
-  --color-brand-50: #f0fdfa;
-  --color-brand-100: #ccfbf1;
-  --color-brand-200: #99f6e4;
-  --color-brand-600: #0d9488;
-  --color-brand-700: #0f766e;
-  --color-brand-800: #115e59;
+  /* SR — cores de destaque apenas */
+  --color-sr-blue: #0072df;
+  --color-sr-green: #87dc3d;
+  --color-sr-blue-50: #e8f4fd;
+  --color-sr-blue-100: #cce8fc;
+  --color-sr-green-50: #f2fae8;
+  --color-sr-blue-dark: #005bb5;
+
+  /* alias brand → azul SR (CTAs, links, foco) */
+  --color-brand-50: #e8f4fd;
+  --color-brand-100: #cce8fc;
+  --color-brand-600: #0072df;
+  --color-brand-700: #0072df;
+  --color-brand-800: #005bb5;
 
   --color-surface-50: #f8fafc;
   --color-surface-100: #f1f5f9;
@@ -33,7 +41,11 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-brand-800 via-brand-700 to-brand-600;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-sr-blue to-sr-green;
+  }
+
+  .bg-highlight-gradient {
+    @apply bg-linear-to-r from-sr-blue to-sr-green;
   }
 
   .glass {
@@ -41,6 +53,6 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-brand-700/5 hover:-translate-y-0.5;
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-sr-blue/10 hover:-translate-y-0.5;
   }
 }

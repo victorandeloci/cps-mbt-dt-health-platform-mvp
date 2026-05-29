@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { BRAND } from '@/data/mockData'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { Button } from '@/components/ui/Button'
 
 const navLinks = [
@@ -19,13 +19,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 glass border-b border-surface-200">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5 min-w-0">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white font-display font-bold text-sm shadow-md">
-            P
-          </div>
-          <span className="font-display font-bold text-lg text-surface-900 tracking-tight">
-            {BRAND.name}
-          </span>
+        <Link to="/" className="flex items-center gap-3 min-w-0">
+          <BrandLogo className="h-8 w-auto sm:h-9" />
         </Link>
 
         <div className="hidden md:flex items-center gap-1">
@@ -36,7 +31,7 @@ export function Navbar() {
               className={({ isActive }) =>
                 `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive
-                    ? 'text-brand-800 bg-brand-50'
+                    ? 'text-sr-blue bg-sr-blue-50'
                     : 'text-surface-700 hover:text-surface-900 hover:bg-surface-100'
                 }`
               }
@@ -77,7 +72,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     `px-4 py-3 rounded-xl text-sm font-medium ${
-                      isActive ? 'bg-brand-50 text-brand-800' : 'text-surface-800'
+                      isActive ? 'bg-sr-blue-50 text-sr-blue' : 'text-surface-800'
                     }`
                   }
                 >

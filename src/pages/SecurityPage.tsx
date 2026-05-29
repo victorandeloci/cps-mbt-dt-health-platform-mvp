@@ -48,7 +48,7 @@ const fadeUp = {
 export function SecurityPage() {
   return (
     <div className="pb-16">
-      <div className="bg-brand-50 border-b border-surface-200">
+      <div className="bg-sr-blue-50 border-b border-surface-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
           <PageHeader
             title="Segurança & Privacidade"
@@ -64,8 +64,8 @@ export function SecurityPage() {
             return (
               <motion.div key={f.title} {...fadeUp} transition={{ delay: i * 0.08 }}>
                 <Card className="h-full">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 mb-4">
-                    <Icon className="h-6 w-6 text-brand-800" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sr-blue-50 mb-4">
+                    <Icon className="h-6 w-6 text-sr-blue" />
                   </div>
                   <h3 className="font-display font-semibold text-surface-900">{f.title}</h3>
                   <p className="mt-2 text-sm text-surface-600 leading-relaxed">{f.description}</p>
@@ -76,23 +76,23 @@ export function SecurityPage() {
         </div>
       </section>
 
-      <section className="bg-brand-800 text-white py-16">
+      <section className="bg-highlight-gradient text-white py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <motion.div {...fadeUp}>
-            <Shield className="h-10 w-10 text-brand-200 mb-4" />
+            <Shield className="h-10 w-10 text-sr-green shrink-0 mb-4" />
             <h2 className="font-display text-2xl font-bold">Compromisso com a LGPD</h2>
-            <p className="mt-4 text-brand-50 leading-relaxed">
-              Na {BRAND.fullName}, privacidade é requisito de design. Interpretações de IA nunca
-              são apresentadas como decisões clínicas autônomas.
+            <p className="mt-4 text-white/90 leading-relaxed">
+              Na plataforma {BRAND.name}, privacidade é requisito de design. Interpretações de IA
+              nunca são apresentadas como decisões clínicas autônomas.
             </p>
           </motion.div>
           <div className="mt-10 space-y-6">
             {principles.map((p, i) => (
               <motion.div key={p.title} {...fadeUp} transition={{ delay: i * 0.1 }} className="flex gap-4">
-                <p.icon className="h-7 w-7 text-brand-200 shrink-0" />
+                <p.icon className="h-7 w-7 text-sr-green shrink-0" />
                 <div>
                   <h3 className="font-display text-lg font-semibold">{p.title}</h3>
-                  <p className="mt-1 text-brand-50 text-sm leading-relaxed">{p.description}</p>
+                  <p className="mt-1 text-white/90 text-sm leading-relaxed">{p.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -102,7 +102,7 @@ export function SecurityPage() {
 
       <section className="mx-auto max-w-3xl px-4 sm:px-6 py-12">
         <Card padding="lg" className="text-center">
-          <Lock className="h-10 w-10 text-brand-700 mx-auto mb-4" />
+          <Lock className="h-10 w-10 text-sr-blue mx-auto mb-4" />
           <h3 className="font-display text-xl font-bold text-surface-900">Seus dados, seu controle</h3>
           <p className="mt-4 text-surface-600 leading-relaxed">
             Exportação, correção e exclusão de dados em poucos cliques, conforme a LGPD.

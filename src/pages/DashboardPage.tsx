@@ -16,7 +16,7 @@ const actions = [
     title: 'Analisar exame',
     description: 'Envie seu laudo e entenda os resultados com apoio de IA.',
     icon: FileText,
-    color: 'bg-brand-700',
+    color: 'bg-sr-blue',
   },
   {
     to: '/consultas',
@@ -30,7 +30,7 @@ const actions = [
     title: 'Minhas consultas',
     description: 'Veja agendamentos e acesse a sala de atendimento.',
     icon: Calendar,
-    color: 'bg-brand-600',
+    color: 'bg-sr-green',
   },
 ]
 
@@ -59,7 +59,7 @@ export function DashboardPage() {
                 <p className="font-display font-semibold text-surface-900">{action.title}</p>
                 <p className="text-sm text-surface-600 mt-0.5">{action.description}</p>
               </div>
-              <ChevronRight className="h-5 w-5 text-surface-400 group-hover:text-brand-700 shrink-0" />
+              <ChevronRight className="h-5 w-5 text-surface-400 group-hover:text-sr-blue shrink-0" />
             </Card>
           </Link>
         ))}
@@ -71,20 +71,20 @@ export function DashboardPage() {
         </h2>
         <Card>
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white font-bold text-sm">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sr-blue text-white font-bold text-sm">
               {consultation.avatarInitials}
             </div>
             <div className="flex-1">
               <p className="font-semibold text-surface-900">{consultation.doctorName}</p>
               <p className="text-sm text-surface-600">{consultation.specialty}</p>
-              <p className="text-sm font-medium text-brand-800 mt-2">
+              <p className="text-sm font-medium text-sr-blue mt-2">
                 {consultation.date} às {consultation.time} · Teleconsulta
               </p>
             </div>
           </div>
           <Link
             to="/consultas"
-            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-800 hover:text-brand-700"
+            className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-sr-blue hover:text-sr-blue-dark"
           >
             Ver detalhes <ChevronRight className="h-4 w-4" />
           </Link>
@@ -96,7 +96,7 @@ export function DashboardPage() {
           <h2 className="text-sm font-semibold uppercase tracking-wide text-surface-600">
             Últimos exames
           </h2>
-          <Link to="/exames" className="text-sm font-semibold text-brand-800 hover:text-brand-700">
+          <Link to="/exames" className="text-sm font-semibold text-sr-blue hover:text-sr-blue-dark">
             Ver todos
           </Link>
         </div>
@@ -105,7 +105,7 @@ export function DashboardPage() {
             <li key={exam.id}>
               <Link to="/exames">
                 <Card hover padding="sm" className="flex items-center gap-3">
-                  <FileText className="h-5 w-5 text-brand-700 shrink-0" />
+                  <FileText className="h-5 w-5 text-sr-blue shrink-0" />
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-surface-900 text-sm">{exam.name}</p>
                     <p className="text-xs text-surface-600">{exam.date}</p>
@@ -121,7 +121,7 @@ export function DashboardPage() {
       {nextInsight && (
         <section className="mt-10">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-surface-600 mb-3 flex items-center gap-2">
-            <Sparkles className="h-4 w-4 text-brand-700" />
+            <Sparkles className="h-4 w-4 text-sr-green" />
             Apoio sobre seus exames (IA)
           </h2>
           <Card>

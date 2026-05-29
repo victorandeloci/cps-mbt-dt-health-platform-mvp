@@ -40,7 +40,7 @@ export function Badge({
 }) {
   const styles = {
     default: 'bg-surface-100 text-surface-800',
-    brand: 'bg-brand-100 text-brand-800',
+    brand: 'bg-sr-blue-50 text-sr-blue',
     muted: 'bg-surface-200 text-surface-700',
   }
   return (

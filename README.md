@@ -1,8 +1,8 @@
-# Previda — Saúde Preventiva
+# SR — Saúde Preventiva Digital
 
 ## Overview
 
-**Previda** helps busy professionals manage preventive care through:
+**SR** — *Cuidar antes é viver melhor.* — helps busy professionals manage preventive care through:
 
 - **Online consultations** (scheduling and video preview)
 - **Exam analysis** with AI **support only** (never diagnosis)

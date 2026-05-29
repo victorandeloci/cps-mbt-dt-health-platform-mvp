@@ -22,11 +22,11 @@ export function Disclaimer({
       className={`flex gap-3 rounded-xl border p-4 text-sm leading-relaxed ${
         isWarning
           ? 'border-amber-300 bg-amber-50 text-amber-950'
-          : 'border-brand-200 bg-brand-50 text-brand-950'
+          : 'border-sr-blue-100 bg-sr-blue-50 text-surface-900'
       } ${className}`}
     >
       <Icon
-        className={`h-5 w-5 shrink-0 mt-0.5 ${isWarning ? 'text-amber-700' : 'text-brand-800'}`}
+        className={`h-5 w-5 shrink-0 mt-0.5 ${isWarning ? 'text-amber-700' : 'text-sr-blue'}`}
       />
       <div>
         {title && <p className="font-semibold mb-1 text-inherit">{title}</p>}

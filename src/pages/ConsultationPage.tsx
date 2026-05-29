@@ -27,8 +27,8 @@ export function ConsultationPage() {
 
   const filterClass = (active: boolean) =>
     active
-      ? 'bg-brand-700 text-white'
-      : 'bg-white border border-surface-300 text-surface-800 hover:border-brand-600'
+      ? 'bg-sr-blue text-white'
+      : 'bg-white border border-surface-300 text-surface-800 hover:border-sr-blue'
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 pb-16">
@@ -68,7 +68,7 @@ export function ConsultationPage() {
             >
               <Card
                 hover
-                className={selectedDoctor?.id === doc.id ? 'ring-2 ring-brand-700' : ''}
+                className={selectedDoctor?.id === doc.id ? 'ring-2 ring-sr-blue' : ''}
               >
                 <button
                   type="button"
@@ -81,7 +81,7 @@ export function ConsultationPage() {
                   }}
                 >
                   <div className="flex gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white font-bold">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-sr-blue text-white font-bold">
                       {doc.avatarInitials}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -90,7 +90,7 @@ export function ConsultationPage() {
                           <h3 className="font-display font-semibold text-surface-900">{doc.name}</h3>
                           <p className="text-sm text-surface-600">{doc.specialty}</p>
                         </div>
-                        <p className="font-bold text-brand-800 shrink-0">R$ {doc.price}</p>
+                        <p className="font-bold text-sr-green shrink-0">R$ {doc.price}</p>
                       </div>
                       <div className="mt-2 flex items-center gap-2 text-sm text-surface-700">
                         <Star className="h-4 w-4 fill-amber-500 text-amber-500" />
@@ -107,7 +107,7 @@ export function ConsultationPage() {
 
         <Card>
           <h3 className="font-display font-semibold text-surface-900 flex items-center gap-2 mb-4">
-            <Calendar className="h-5 w-5 text-brand-700" />
+            <Calendar className="h-5 w-5 text-sr-blue" />
             Agendar horário
           </h3>
 
@@ -143,8 +143,8 @@ export function ConsultationPage() {
                     onClick={() => setSelectedSlot(slot)}
                     className={`px-4 py-3 rounded-xl text-sm font-semibold text-left transition-colors ${
                       selectedSlot === slot
-                        ? 'bg-brand-700 text-white'
-                        : 'bg-surface-50 border border-surface-200 text-surface-900 hover:border-brand-600'
+                        ? 'bg-sr-blue text-white'
+                        : 'bg-surface-50 border border-surface-200 text-surface-900 hover:border-sr-blue'
                     }`}
                   >
                     {slot}
@@ -161,16 +161,16 @@ export function ConsultationPage() {
         {inCallPreview && selectedDoctor && (
           <Card padding="sm">
             <h3 className="font-display font-semibold text-sm px-2 pt-2 mb-3 flex items-center gap-2 text-surface-900">
-              <Video className="h-4 w-4 text-brand-700" />
+              <Video className="h-4 w-4 text-sr-blue" />
               Sala de teleconsulta (prévia)
             </h3>
-            <div className="relative aspect-video rounded-xl bg-brand-800 overflow-hidden">
+            <div className="relative aspect-video rounded-xl bg-sr-blue-dark overflow-hidden">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                <div className="h-16 w-16 rounded-full bg-brand-700 flex items-center justify-center text-xl font-bold mb-2">
+                <div className="h-16 w-16 rounded-full bg-sr-blue flex items-center justify-center text-xl font-bold mb-2">
                   {selectedDoctor.avatarInitials}
                 </div>
                 <p className="font-semibold">{selectedDoctor.name}</p>
-                <p className="text-brand-100 text-sm mt-1">Conectando...</p>
+                <p className="text-white/80 text-sm mt-1">Conectando...</p>
               </div>
               <div className="absolute bottom-0 inset-x-0 p-3 flex justify-center gap-3 bg-black/40">
                 <button

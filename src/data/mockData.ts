@@ -13,9 +13,9 @@ import type {
 } from '@/types'
 
 export const BRAND = {
-  name: 'Previda',
-  fullName: 'Previda',
-  tagline: 'Consultas e exames preventivos, sem complicação.',
+  name: 'SR',
+  fullName: 'SR',
+  tagline: 'Cuidar antes é viver melhor.',
   persona: {
     name: 'Judite Costa',
     age: 34,

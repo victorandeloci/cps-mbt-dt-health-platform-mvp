@@ -50,11 +50,11 @@ export function ExamAnalysisPage() {
             onDrop={onDrop}
             className={`relative flex flex-col items-center justify-center rounded-2xl border-2 border-dashed p-10 transition-colors ${
               dragOver
-                ? 'border-brand-700 bg-brand-50'
-                : 'border-surface-300 bg-white hover:border-brand-600'
+                ? 'border-sr-blue bg-sr-blue-50'
+                : 'border-surface-300 bg-white hover:border-sr-blue'
             }`}
           >
-            <Upload className="h-10 w-10 text-brand-700 mb-4" />
+            <Upload className="h-10 w-10 text-sr-blue mb-4" />
             <p className="font-semibold text-surface-900 text-center">
               Arraste seu PDF ou imagem
             </p>
@@ -82,7 +82,7 @@ export function ExamAnalysisPage() {
               exit={{ opacity: 0 }}
               className="py-8 text-center"
             >
-              <Loader2 className="h-10 w-10 text-brand-700 animate-spin mx-auto mb-4" />
+              <Loader2 className="h-10 w-10 text-sr-blue animate-spin mx-auto mb-4" />
               <p className="font-semibold text-surface-900">
                 {phase === 'uploading'
                   ? 'Enviando com segurança...'
@@ -96,7 +96,7 @@ export function ExamAnalysisPage() {
               )}
               <div className="mt-6 h-2.5 rounded-full bg-surface-200 overflow-hidden max-w-xs mx-auto">
                 <motion.div
-                  className="h-full bg-brand-700 rounded-full"
+                  className="h-full bg-linear-to-r from-sr-blue to-sr-green rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                 />
@@ -116,7 +116,7 @@ export function ExamAnalysisPage() {
       {!showResults && phase === 'idle' && (
         <Card className="flex items-center justify-center py-12">
           <div className="text-center text-surface-600">
-            <Sparkles className="h-10 w-10 mx-auto mb-3 text-brand-600" />
+            <Sparkles className="h-10 w-10 mx-auto mb-3 text-sr-green" />
             <p className="text-sm">O resumo aparecerá aqui após o envio.</p>
           </div>
         </Card>
@@ -131,7 +131,7 @@ export function ExamAnalysisPage() {
           >
             <Card>
               <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="h-5 w-5 text-brand-700" />
+                <Sparkles className="h-5 w-5 text-sr-green" />
                 <h3 className="font-display font-semibold text-surface-900">Resumo de apoio (IA)</h3>
               </div>
               <p className="text-surface-700 leading-relaxed">{mockAIInterpretation.summary}</p>
@@ -159,7 +159,7 @@ export function ExamAnalysisPage() {
               <h3 className="font-display font-semibold text-surface-900 mb-4">Valores em destaque</h3>
               <ul className="space-y-3">
                 {mockAIInterpretation.highlightedValues.map((v) => (
-                  <li key={v.name} className="border-l-4 border-brand-700 pl-4 py-1">
+                  <li key={v.name} className="border-l-4 border-sr-blue pl-4 py-1">
                     <p className="font-semibold text-sm text-surface-900">{v.name}</p>
                     <p className="text-sm text-surface-600 mt-0.5">{v.note}</p>
                   </li>

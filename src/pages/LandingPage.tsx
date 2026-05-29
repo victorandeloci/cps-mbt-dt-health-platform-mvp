@@ -10,6 +10,7 @@ import {
   CheckCircle2,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { BRAND, howItWorks, landingFeatures, testimonials } from '@/data/mockData'
@@ -31,7 +32,7 @@ const fadeUp = {
 export function LandingPage() {
   return (
     <div>
-      <section className="relative overflow-hidden bg-linear-to-b from-brand-50 to-surface-50">
+      <section className="relative overflow-hidden bg-linear-to-b from-sr-blue-50 to-surface-50">
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -39,12 +40,13 @@ export function LandingPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-surface-900 leading-[1.15]">
-              {BRAND.name}
-            </h1>
+            <BrandLogo className="h-14 sm:h-16 w-auto mb-8" />
+            <p className="font-display text-2xl sm:text-3xl font-bold text-gradient leading-snug">
+              {BRAND.tagline}
+            </p>
             <p className="mt-6 text-lg text-surface-700 leading-relaxed max-w-2xl">
-              {BRAND.tagline} Agende consultas, entenda seus exames e cuide da saúde com apoio de IA
-              — sempre como suporte, nunca como diagnóstico.
+              Agende consultas, entenda seus exames e cuide da saúde com apoio de IA — sempre como
+              suporte, nunca como diagnóstico.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link to="/consultas">
@@ -72,7 +74,7 @@ export function LandingPage() {
               { icon: Shield, label: 'Privacidade', desc: 'LGPD e dados protegidos' },
             ].map((item) => (
               <Card key={item.label} hover={false} padding="sm" className="text-center sm:text-left">
-                <item.icon className="h-6 w-6 text-brand-700 mx-auto sm:mx-0 mb-2" />
+                <item.icon className="h-6 w-6 text-sr-blue mx-auto sm:mx-0 mb-2" />
                 <p className="font-semibold text-surface-900">{item.label}</p>
                 <p className="text-sm text-surface-600 mt-1">{item.desc}</p>
               </Card>
@@ -97,8 +99,8 @@ export function LandingPage() {
               return (
                 <motion.div key={f.title} {...fadeUp} transition={{ delay: i * 0.08 }}>
                   <Card className="h-full">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 mb-4">
-                      <Icon className="h-5 w-5 text-brand-800" />
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sr-blue-50 mb-4">
+                      <Icon className="h-5 w-5 text-sr-blue" />
                     </div>
                     <h3 className="font-display font-semibold text-surface-900">{f.title}</h3>
                     <p className="mt-2 text-sm text-surface-600 leading-relaxed">{f.description}</p>
@@ -118,7 +120,7 @@ export function LandingPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {howItWorks.map((step, i) => (
               <motion.div key={step.step} {...fadeUp} transition={{ delay: i * 0.1 }} className="text-center">
-                <span className="font-display text-4xl font-bold text-brand-200">{step.step}</span>
+                <span className="font-display text-4xl font-bold text-sr-green/40">{step.step}</span>
                 <h3 className="font-display text-lg font-semibold mt-3 text-surface-900">
                   {step.title}
                 </h3>
@@ -129,16 +131,16 @@ export function LandingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-brand-800">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white">
+      <section className="py-16 bg-highlight-gradient text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
-              <div className="inline-flex items-center gap-2 text-brand-100 mb-4">
+              <div className="inline-flex items-center gap-2 text-white/90 mb-4">
                 <Lock className="h-5 w-5" />
                 <span className="text-sm font-semibold uppercase tracking-wider">LGPD</span>
               </div>
               <h2 className="font-display text-3xl font-bold">Privacidade em primeiro lugar</h2>
-              <p className="mt-4 text-brand-50 leading-relaxed">
+              <p className="mt-4 text-white/90 leading-relaxed">
                 Criptografia, consentimento claro e profissionais verificados — sua saúde tratada com
                 o cuidado que merece.
               </p>
@@ -153,8 +155,8 @@ export function LandingPage() {
                 'IA apenas com finalidade educativa',
                 'Profissionais com registro validado',
               ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-brand-50">
-                  <CheckCircle2 className="h-5 w-5 text-brand-200 shrink-0" />
+                <li key={item} className="flex items-center gap-3 text-white/90">
+                  <CheckCircle2 className="h-5 w-5 text-sr-green shrink-0" />
                   {item}
                 </li>
               ))}
@@ -179,7 +181,7 @@ export function LandingPage() {
                   </div>
                   <p className="text-surface-700 leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
                   <div className="mt-6 flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-full bg-brand-700 flex items-center justify-center text-white text-sm font-bold">
+                    <div className="h-10 w-10 rounded-full bg-sr-blue flex items-center justify-center text-white text-sm font-bold">
                       {t.avatarInitials}
                     </div>
                     <div>
@@ -197,12 +199,12 @@ export function LandingPage() {
       <section className="py-16 px-4">
         <motion.div
           {...fadeUp}
-          className="mx-auto max-w-3xl rounded-3xl bg-brand-700 p-10 sm:p-12 text-center"
+          className="mx-auto max-w-3xl rounded-3xl bg-highlight-gradient p-10 sm:p-12 text-center"
         >
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
             Comece pela sua necessidade
           </h2>
-          <p className="mt-4 text-brand-50 max-w-lg mx-auto">
+          <p className="mt-4 text-white/90 max-w-lg mx-auto">
             Consulta ou exame — escolha o caminho mais direto.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center text-surface-900">

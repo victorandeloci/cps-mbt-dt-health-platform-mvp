@@ -11,11 +11,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const base =
-  'inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-700 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
+  'inline-flex items-center justify-center gap-2 font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sr-blue focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-brand-700 text-white hover:bg-brand-800 shadow-md shadow-brand-700/20 hover:scale-[1.02] active:scale-[0.98]',
+    'bg-sr-blue text-white hover:bg-sr-blue-dark shadow-md shadow-sr-blue/25 hover:scale-[1.02] active:scale-[0.98]',
   secondary:
     'bg-surface-800 text-white hover:bg-surface-900 hover:scale-[1.02] active:scale-[0.98]',
   ghost: 'bg-transparent text-surface-800 hover:bg-surface-100',
