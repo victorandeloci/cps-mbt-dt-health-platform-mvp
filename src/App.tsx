@@ -6,9 +6,11 @@ import { ExamAnalysisPage } from '@/pages/ExamAnalysisPage'
 import { ConsultationPage } from '@/pages/ConsultationPage'
 import { SecurityPage } from '@/pages/SecurityPage'
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || undefined
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<LandingPage />} />

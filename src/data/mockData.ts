@@ -13,9 +13,9 @@ import type {
 } from '@/types'
 
 export const BRAND = {
-  name: 'SR',
-  fullName: 'SR - Plataforma de Saúde Preventiva Digital',
-  tagline: 'Consultas, exames e cuidado preventivo — tudo em um só lugar.',
+  name: 'Previda',
+  fullName: 'Previda',
+  tagline: 'Consultas e exames preventivos, sem complicação.',
   persona: {
     name: 'Judite Costa',
     age: 34,

@@ -8,11 +8,11 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700 text-white font-bold text-xs">
-                {BRAND.name}
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-700 text-white font-bold text-sm">
+                P
               </div>
               <span className="font-display font-bold text-surface-900 text-sm">
-                {BRAND.fullName}
+                {BRAND.name}
               </span>
             </div>
             <p className="text-sm text-surface-600 max-w-md leading-relaxed">{BRAND.tagline}</p>

@@ -21,11 +21,10 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5 min-w-0">
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-700 text-white font-display font-bold text-sm shadow-md">
-            {BRAND.name}
+            P
           </div>
-          <span className="font-display font-bold text-surface-900 leading-tight truncate hidden sm:block">
-            <span className="lg:hidden">{BRAND.name} Saúde</span>
-            <span className="hidden lg:inline text-base">{BRAND.fullName}</span>
+          <span className="font-display font-bold text-lg text-surface-900 tracking-tight">
+            {BRAND.name}
           </span>
         </Link>
 

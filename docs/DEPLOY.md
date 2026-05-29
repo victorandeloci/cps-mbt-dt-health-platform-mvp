@@ -35,7 +35,8 @@ VITE_BASE_PATH=/cps-mbt-dt-health-platform-mvp/
 
 ## Troubleshooting
 
-- **Blank page / 404 on refresh:** Confirm `VITE_BASE_PATH` matches the repo name exactly (slashes included).
+- **CSS/JS 404 em `github.io/assets/...` (sem nome do repo):** O `vite.config.ts` usa `loadEnv` para ler `.env.production`. Rode `npm run deploy` de novo após corrigir `VITE_BASE_PATH`.
+- **Blank page / 404 on refresh:** Confirm `VITE_BASE_PATH` matches the repo name exactly (slashes included). O build gera `404.html` para rotas da SPA.
 - **Assets 404:** Rebuild with the correct `.env.production` before deploying.
 - **Router issues:** `BrowserRouter` works on GitHub Pages when `base` is set correctly; all internal links are relative to the app base.
 

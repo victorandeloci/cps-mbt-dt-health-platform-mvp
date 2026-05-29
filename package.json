@@ -1,11 +1,11 @@
 {
-  "name": "sr-saude-preventiva-mvp",
+  "name": "previda-mvp",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --mode production && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint ."

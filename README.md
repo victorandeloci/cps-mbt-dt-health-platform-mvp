@@ -1,8 +1,8 @@
-# SR - Plataforma de Saúde Preventiva Digital
+# Previda — Saúde Preventiva
 
 ## Overview
 
-**SR - Plataforma de Saúde Preventiva Digital** helps busy professionals manage preventive care through:
+**Previda** helps busy professionals manage preventive care through:
 
 - **Online consultations** (scheduling and video preview)
 - **Exam analysis** with AI **support only** (never diagnosis)

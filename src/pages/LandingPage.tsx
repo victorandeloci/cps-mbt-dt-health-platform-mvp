@@ -40,11 +40,11 @@ export function LandingPage() {
             className="max-w-3xl"
           >
             <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-surface-900 leading-[1.15]">
-              {BRAND.fullName}
+              {BRAND.name}
             </h1>
             <p className="mt-6 text-lg text-surface-700 leading-relaxed max-w-2xl">
-              {BRAND.tagline} Agende consultas, entenda seus exames e cuide da saúde preventiva com
-              apoio de IA — sempre como suporte, nunca como diagnóstico.
+              {BRAND.tagline} Agende consultas, entenda seus exames e cuide da saúde com apoio de IA
+              — sempre como suporte, nunca como diagnóstico.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link to="/consultas">
